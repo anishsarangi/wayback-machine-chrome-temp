@@ -82,18 +82,18 @@ function get_url(){
 }
 
 function social_share(eventObj){
-    var parent=eventObj.target.parentNode;
-    var id=parent.getAttribute('id');
-    var url = get_clean_url();
-    var open_url="";
+    let parent=eventObj.target.parentNode;
+    let id=parent.getAttribute('id');
+    let url = get_clean_url();
+    let open_url="";
+    const overview_url = 'https://web.archive.org/web/*/'
+    let sharing_url = overview_url + url
     if(id.includes('fb')){
-        open_url="https://www.facebook.com/sharer/sharer.php?u="+url;
+        open_url="https://www.facebook.com/sharer/sharer.php?u="+sharing_url;
     }else if(id.includes('twit')){
-        open_url="https://twitter.com/home?status="+url;
-    }else if(id.includes('gplus')){
-        open_url="https://plus.google.com/share?url="+url;
+        open_url="https://twitter.com/intent/tweet?url="+sharing_url;
     }else if(id.includes('linkedin')){
-        open_url="https://www.linkedin.com/shareArticle?url="+url;
+        open_url="https://www.linkedin.com/shareArticle?url="+sharing_url;
     }
     window.open(open_url, 'newwindow', 'width=800, height=280,left=0');
 }
