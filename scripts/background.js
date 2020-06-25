@@ -491,20 +491,20 @@ var contextMenuItemRecent={
     "id":"recent",
     "title":"Recent Version",
     "contexts":["all"],
-    "documentUrlPatterns":["*://*/*", "ftp://*/*"]
+    "documentUrlPatterns":["*://*/*"]
 };
 var contextMenuItemAll={
     "id":"all",
     "title":"All Versions",
     "contexts":["all"],
-    "documentUrlPatterns":["*://*/*", "ftp://*/*"]
+    "documentUrlPatterns":["*://*/*"]
 };
 
 var contextMenuItemSave={
     "id":"save",
     "title":"Save Page Now",
     "contexts":["all"],
-    "documentUrlPatterns":["*://*/*", "ftp://*/*"]
+    "documentUrlPatterns":["*://*/*"]
 };
 chrome.contextMenus.create(contextMenuItemFirst);
 chrome.contextMenus.create(contextMenuItemRecent);
