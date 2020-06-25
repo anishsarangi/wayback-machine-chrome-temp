@@ -83,16 +83,19 @@ function get_url(){
 
 function social_share(eventObj){
     let parent=eventObj.target.parentNode;
-    let id=parent.getAttribute('id');
+    var id = eventObj.target.getAttribute('id');
+    if(id === null){
+        id = parent.getAttribute('id');
+    }
     let url = get_clean_url();
     let open_url="";
     const overview_url = 'https://web.archive.org/web/*/'
     let sharing_url = overview_url + url
     if(id.includes('fb')){
         open_url="https://www.facebook.com/sharer/sharer.php?u="+sharing_url;
-    }else if(id.includes('twit')){
+    }else if(id.includes('twit') || id.includes('twit')){
         open_url="https://twitter.com/intent/tweet?url="+sharing_url;
-    }else if(id.includes('linkedin')){
+    }else if(id.includes('linkedin')|| id.includes('linkedin')){
         open_url="https://www.linkedin.com/shareArticle?url="+sharing_url;
     }
     window.open(open_url, 'newwindow', 'width=800, height=280,left=0');
