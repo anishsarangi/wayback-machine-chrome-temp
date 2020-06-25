@@ -13,12 +13,9 @@
       "notifications",
       "tabs",
       "activeTab",
-      "storage",
       "webRequest",
       "webRequestBlocking",
       "contextMenus",
-      "http://*/*",
-      "https://*/*",
       "*://*/*",
       "<all_urls>"
   ],
