@@ -214,7 +214,6 @@ document.getElementById('recent_capture').onclick = recent_capture;
 document.getElementById('first_capture').onclick = first_capture;
 document.getElementById('fb_share').onclick =social_share;
 document.getElementById('twit_share').onclick =social_share;
-document.getElementById('gplus_share').onclick =social_share;
 document.getElementById('linkedin_share').onclick =social_share;
 document.getElementById('alexa_statistics').onclick =alexa_statistics;
 document.getElementById('whois_statistics').onclick =whois_statistics;
